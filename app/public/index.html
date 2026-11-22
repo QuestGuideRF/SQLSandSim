@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>SQL Sand Sim</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="row">
+    <button id="initBtn">init</button>
+    <button id="startBtn">start</button>
+    <button id="stopBtn">stop</button>
+
+    <span class="label">timeline:</span>
+    <input id="timeline" type="range" min="0" max="0" value="0" step="1" disabled />
+    <span id="timelineTickVal" class="mono">-</span>
+    <button id="timelineGoToBtn" disabled>go</button>
+
+    <span class="label">brush:</span>
+    <input id="brush" type="number" min="1" max="80" value="14" style="width: 35px;" />
+
+    <span class="label">tick:</span>
+    <span id="tick" class="mono">-</span>
+
+    <span class="label">fps:</span>
+    <span id="fps" class="mono">-</span>
+  </header>
+
+  <div id="wrap">
+    <canvas id="sim_canvas" width="1024" height="576"></canvas>
+    <div class="row">
+      <span>Left click = sand | Right click = solid.</span>
+    </div>
+  </div>
+
+  <div id="status_logger">connecting...</div>
+
+  <script src="client.js"></script>
+</body>
+
+</html>
